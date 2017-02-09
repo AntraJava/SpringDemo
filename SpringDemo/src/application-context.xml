@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xsi:schemaLocation=" 
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<aop:aspectj-autoproxy />
+	<context:component-scan base-package="net.antra.springdemo" />
+	<bean id="aspect" class="net.antra.springdemo.aop.DemoAspect" name="a1;a2">
+	</bean>
+	<alias name="aspect" alias="a3"></alias>
+ 	
+ 	
+ <!-- 	<bean id="aDAO" class="net.antra.springdemo.dao.DemoDAOImpl">
+         <property name="message" value="The default value of DAO is HAHAHA." />
+    </bean>
+    
+	<bean id="aService" class="net.antra.springdemo.service.DemoServiceImpl">
+		<property name="aDAO" ref="aDAO"></property>
+	</bean>  -->
+	
+	
+</beans>
