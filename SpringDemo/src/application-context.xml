@@ -17,6 +17,7 @@
 	</bean>
 	<alias name="aspect" alias="a3"></alias>
  	
+
  	
  <!-- 	<bean id="aDAO" class="net.antra.springdemo.dao.DemoDAOImpl">
          <property name="message" value="The default value of DAO is HAHAHA." />

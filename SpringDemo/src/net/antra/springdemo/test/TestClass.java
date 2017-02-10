@@ -3,11 +3,8 @@ package net.antra.springdemo.test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import net.antra.springdemo.aop.DemoAspect;
 import net.antra.springdemo.dao.DemoDAO;
-import net.antra.springdemo.dao.DemoDAOImpl;
-import net.antra.springdemo.service.DemoService;
-import net.antra.springdemo.service.DemoServiceImpl;
+import net.antra.springdemo.simulatedcontainer.Apple;
 
 public class TestClass {
 
@@ -18,6 +15,7 @@ public class TestClass {
 		
 //		System.out.println(bean == bean2);
 		
+//		
 		DemoDAO aDAO = (DemoDAO)ac.getBean("demoDAOImpl");
 		aDAO.test1234();
 //		DemoService aService = (DemoService)ac.getBean("aService");

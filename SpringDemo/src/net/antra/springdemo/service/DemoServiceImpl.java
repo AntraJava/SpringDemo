@@ -10,6 +10,11 @@ import net.antra.springdemo.dao.DemoDAO;
 public class DemoServiceImpl implements DemoService{
 	
 	@Autowired
+	@Qualifier("demoDAOImpl2")
+	DemoDAO aDAO2;
+	
+	@Autowired
+	@Qualifier("demoDAOImpl")
 	DemoDAO aDAO;
 	
 	@Override
@@ -24,8 +29,5 @@ public class DemoServiceImpl implements DemoService{
 		return aDAO;
 	}
 	
-	//@Autowired
-	public void setaDAO(DemoDAO aDAO) {
-		this.aDAO = aDAO;
-	}
+	
 }

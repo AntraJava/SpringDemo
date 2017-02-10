@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 @Repository // default name = demoDAOImpl 
-public class DemoDAOImpl implements DemoDAO {
+public class DemoDAOImpl2 implements DemoDAO {
 	
 	private String message = "123";
 	
