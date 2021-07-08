@@ -1,15 +1,24 @@
 package net.antra.springdemo.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 
-//@Configuration
-//@ComponentScan(basePackages = { "net.antra.Springdemo" })
+import java.util.Arrays;
+import java.util.List;
+
+@Configuration
+@ComponentScan(basePackages = { "net.antra.springdemo" })
+@EnableAspectJAutoProxy
 public class MyConfig {
 	
 	@Bean(name="myString")
 	public String getAString(){
 		return "hello";
 	}
+
+	@Bean(name="myString2")
+	@Primary
+	public String getAString2(){
+		return "hi";
+	}
+
 }
